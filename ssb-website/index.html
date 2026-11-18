@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smart Sewer Bot (SSB) | SSS Solutions</title>
+<meta name="description" content="Smart Sewer Bot: a low-cost remote robot that senses, agitates, extracts and reports, so no worker has to enter a sewer.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap bar">
+    <a href="#home" class="brand"><img src="images/image copy.png" alt="SSS Solutions logo"></a>
+    <button class="burger" aria-label="Menu" aria-expanded="false">&#9776;</button>
+    
+  </div>
+</header>
+
+<main id="home">
+
+<section class="hero">
+  <div class="wrap two">
+    <div>
+      <p class="tag">Smart Sanitation, Safer Lives</p>
+      <h1>Smart Sewer Bot <span>(SSB)</span></h1>
+      <p class="lead">A compact, low-cost robot that <b>senses, analyzes and cleans</b> sewers, so no worker has to enter one.</p>
+      <div class="btns"><a class="btn" href="#working">See how it works</a><a class="btn ghost" href="#demo">Watch the prototype</a></div>
+      <ul class="chips"><li>Remote operation</li><li>Live gas sensing</li><li>Stirring + suction</li><li>Auditable reports</li></ul>
+    </div>
+    <img class="rise" src="images/robot.jpg" alt="Concept render of the SSB robot at a manhole with gas sensors, camera and stirring blades labelled">
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About our project</h2>
+    <div class="grid2">
+      <div>
+        <p>Sewer maintenance is dangerous: toxic gases and a lack of oxygen put workers at serious risk. <b>Smart Sewer Bot</b> uses sensors and automation to monitor gas levels and carry out pumping and cleaning from outside, keeping people out of harm’s way.</p>
+        <h3>Objectives</h3>
+        <ul class="tick">
+          <li>Detect toxic gases (H₂S, CH₄, CO) and low oxygen</li>
+          <li>Reduce human involvement in sewer cleaning</li>
+          <li>Build a low-cost automated solution</li>
+          <li>Improve safety for sanitation workers</li>
+          <li>Perform basic cleaning and pumping automatically</li>
+        </ul>
+      </div>
+   
+    </div>
+  </div>
+</section>
+
+<section id="problem" class="alt">
+  <div class="wrap two">
+    <div>
+      <h2>The problem</h2>
+      <p>Sewers lack safe, continuous and integrated monitoring and maintenance. That means hazardous manual entry, late detection of abnormal conditions and slow removal of waste.</p>
+      <ul class="tick bad">
+        <li><b>Toxic gases</b> (H₂S, CH₄, CO) and low oxygen</li>
+        <li><b>~500 deaths</b> in sewers and septic tanks since 2019</li>
+        <li><b>Manual, slow</b> inspection with poor visibility</li>
+        <li><b>No real-time hazard data</b> for workers</li>
+        <li><b>Overflow and blockage risk</b> from slow cleaning</li>
+      </ul>
+    </div>
+    <img src="images/news.jpg" alt="Newspaper clippings about manual scavenging deaths">
+  </div>
+</section>
+
+<section id="solution">
+  <div class="wrap">
+    <h2>Our solution</h2>
+    <p class="lead2">A remote-operated robot. The operator stays outside, and the robot senses, cleans and reports. Unlike existing solutions that either inspect <i>or</i> clean, SSB gives a complete automated cycle: sludge agitation, intelligent sensing and efficient suction in one compact, affordable unit built for real-world Indian conditions.</p>
+    <div class="cards">
+      <div class="card"><h4>No human entry</h4><p>The operator works from outside the sewer.</p></div>
+      <div class="card"><h4>Live visibility</h4><p>Camera and depth sensing guide the operator.</p></div>
+      <div class="card"><h4>Stirring + suction</h4><p>Blades loosen sludge, a pump removes it.</p></div>
+      <div class="card"><h4>Safety first</h4><p>Unsafe gas stops motors and pump and sends an alert.</p></div>
+      <div class="card"><h4>Low cost, modular</h4><p>Easy to scale; core prototype electronics cost ₹1,800–3,800.</p></div>
+      <div class="card"><h4>Government aligned</h4><p>Supports NAMASTE, Swachh Bharat and smart-city programs.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="working" class="alt">
+  <div class="wrap">
+    <h2>How the project works</h2>
+    <p class="lead2">Six steps, always guarded by a safety interlock. Click a step to read more.</p>
+    <ol class="steps" id="steps">
+      <li class="on" data-i="0"><b>1</b>Deploy</li><li data-i="1"><b>2</b>Sense</li><li data-i="2"><b>3</b>Inspect</li>
+      <li data-i="3"><b>4</b>Agitate</li><li data-i="4"><b>5</b>Extract</li><li data-i="5"><b>6</b>Report</li>
+    </ol>
+    <div class="stepinfo" id="stepinfo" aria-live="polite"></div>
+    <div class="interlock"><b>Safety interlock:</b> unsafe gas or low oxygen → motors and pump stop, alert sent.</div>
+
+    <h3>Core components</h3>
+    <div class="cards small">
+      <div class="card"><h4>Sensors</h4><p>MQ-series gas sensors (CH₄, H₂S, CO, O₂), depth/level sensor, pH sensor (planned).</p></div>
+      <div class="card"><h4>Controller</h4><p>Arduino UNO / ESP32 / NodeMCU with threshold comparison and safety-interlock firmware.</p></div>
+      <div class="card"><h4>Camera</h4><p>ESP32-CAM for live, low-light video inside the pipe or tank.</p></div>
+      <div class="card"><h4>Agitator + pump</h4><p>Motorized blades loosen sludge; a sludge pump removes it to a tanker.</p></div>
+      <div class="card"><h4>Drive + relay</h4><p>L298N motor driver, relay module, DC gear motors for mobility.</p></div>
+      <div class="card"><h4>Power + link</h4><p>12 V battery pack; Wi-Fi via ESP32, tethered-first inside metal manholes.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="wrap">
+    <h2>Flow chart</h2>
+    <h3>Robot decision flow</h3>
+    <div class="flow">
+      <div class="node">Start</div><i>→</i>
+      <div class="node">Read gas, O₂ and depth sensors</div><i>→</i>
+      <div class="node dec">Reading above safe threshold?</div>
+      <div class="branch">
+        <div><span class="yes">YES</span><div class="node red">Stop motors and pump, send alert, safe state</div></div>
+        <div><span class="no">NO</span><div class="node green">Agitate → suction → transfer to tanker</div></div>
+      </div>
+      <i>→</i><div class="node">Log data, video and report</div>
+    </div>
+
+    <h3>Try the safety interlock</h3>
+    <div class="sim card">
+      <label for="gas">Gas sensor reading: <b id="gasVal">250</b> (threshold 400, as in the prototype code)</label>
+      <input type="range" id="gas" min="0" max="800" value="250">
+      <div class="simrow">
+        <div class="lamp" id="lamp"></div>
+        <p id="simText"></p>
+      </div>
+    </div>
+
+    <h3>Prototype chain</h3>
+    <div class="flow mini"><div class="node">Gas sensor</div><i>→</i><div class="node">Arduino / ESP</div><i>→</i><div class="node">Relay</div><i>→</i><div class="node">Motor / pump</div></div>
+
+    <h3>Full system architecture</h3>
+    <p>Field unit (Sense → Decide → Act → Clean) plus the digital platform: citizen complaint portal, municipal dashboard, database, IoT control, workflow tracking, digital evidence, reports, analytics and community rewards. Tap to zoom.</p>
+    <img class="arch zoomable" src="images/archi.jpg" alt="Smart Sewer Bot system architecture: robot hardware, communication and monitoring platform">
+  </div>
+</section>
+
+<section id="demo" class="alt">
+  <div class="wrap two">
+    <div>
+      <h2>Prototype in action</h2>
+      <p>Our working prototype: a gas sensor feeds a microcontroller, which switches a relay that drives the motor/pump when readings cross the threshold. Core sensing, control and pumping are demonstrated; full robotic integration is next.</p>
+      <div class="parts">
+        <figure><img src="images/arduino.jpg" alt="Arduino UNO"><figcaption>Arduino UNO</figcaption></figure>
+        <figure><img src="images/mq135.jpg" alt="MQ-135 gas sensor"><figcaption>MQ-135 sensor</figcaption></figure>
+        <figure><img src="images/motor.jpg" alt="DC motor"><figcaption>DC motor</figcaption></figure>
+        <figure><img src="images/battery.jpg" alt="12 V battery"><figcaption>12 V battery</figcaption></figure>
+      </div>
+    </div>
+    <video controls preload="metadata" poster="images/video-poster.jpg" playsinline>
+      <source src="video/prototype-demo.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+  </div>
+</section>
+
+<section id="special">
+  <div class="wrap">
+    <h2>What makes us special</h2>
+    <p class="lead2"><b>Our edge:</b> sensing, agitation and suction in one low-cost, safety-first robot.</p>
+    <div class="vs">
+      <div class="vh a">Today’s practice</div><div></div><div class="vh b">Smart Sewer Bot</div>
+      <div>Human enters sewer: toxic gas, confined space</div><i>→</i><div>Remote operation: operator stays outside</div>
+      <div>Limited sensing: hazards not monitored</div><i>→</i><div>Continuous gas sensing: always-on safety data</div>
+      <div>Manual inspection: poor visibility</div><i>→</i><div>Live camera + depth: see inside, stay outside</div>
+      <div>Manual extraction: slow and physically hard</div><i>→</i><div>Agitator + suction: faster, repeatable cleaning</div>
+    </div>
+
+    <h3>Compared with existing solutions</h3>
+    <div class="scroll"><table>
+      <thead><tr><th>Existing solution</th><th>Strength</th><th>Limitation</th><th>SSB advantage</th></tr></thead>
+      <tbody>
+        <tr><td>Manual crews, vacuum/jetting trucks</td><td>Flexible, no robot cost</td><td>Toxic-gas exposure, labour-heavy, little digital data</td><td>No human entry; every job logged</td></tr>
+        <tr><td>CCTV crawlers</td><td>Good visual inspection</td><td>Inspection and cleaning are separate jobs</td><td>Sense, agitate and clean in one unit</td></tr>
+        <tr><td>Enterprise robots</td><td>Advanced mobility and tools</td><td>High cost (₹20–31 lakh+ benchmark), out of reach for small bodies</td><td>Affordable sub-enterprise tier</td></tr>
+        <tr><td>Other sense + clean entrants</td><td>Prove market demand</td><td>Software and data layers still immature</td><td>Safety trigger already demonstrated</td></tr>
+      </tbody></table></div>
+    <ul class="tick">
+      <li><b>Integrated workflow:</b> sense → assess → agitate → suction → document as one purchase</li>
+      <li><b>Low cost:</b> aimed at smaller municipalities, contractors, hotels, hospitals and housing societies</li>
+      <li><b>Safety demonstrated today:</b> gas-threshold motor/pump control already works</li>
+      <li><b>Data:</b> every job produces auditable reports</li>
+    </ul>
+  </div>
+</section>
+
+<section id="more" class="alt">
+  <div class="wrap">
+    <h2>Impact, business and roadmap</h2>
+    <div class="stats">
+      <div><b data-n="500" data-pre="~">500</b><span>sewer and septic-tank deaths since 2019</span></div>
+      <div><b data-n="0">0</b><span>target: zero fatalities</span></div>
+      <div><b data-n="75" data-suf="%">75%</b><span>target: less cleaning time</span></div>
+      <div><b data-n="50" data-suf="%">50%</b><span>target: lower operating cost</span></div>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>Benefits</h3><ul class="tick">
+        <li><b>Social:</b> protects workers, supports NAMASTE</li>
+        <li><b>Economic:</b> low-cost build, fewer man-hours</li>
+        <li><b>Environmental:</b> fewer blockages and overflows</li>
+        <li><b>Data:</b> auditable reports for every job</li></ul></div>
+      <div class="card"><h3>Who it is for</h3><ul class="tick">
+        <li>Municipalities, sanitation departments, contractors</li>
+        <li>Hotels, hospitals, apartments, malls, IT parks, industry</li>
+        <li>₹8,000+ crore Indian market and 3M+ septic tanks</li></ul></div>
+    </div>
+
+    <h3>Business model</h3>
+    <div class="grid2"><p>Revenue from robot sales, rental/leasing for short sewer jobs, annual maintenance plans, software dashboards and analytics, and government project contracts. We start with contractors and facilities, then move to municipal tenders.</p>
+    <img class="zoomable" src="images/revenue.jpg" alt="Multi-source revenue model"></div>
+
+    <h3>Beyond sewers</h3>
+    <p>One robot base with swappable attachments can extend to lake and pond debris cleaning, wells and sumps, flood and emergency wastewater pumping, and water-quality monitoring (pH, turbidity, temperature), always with safe disposal of what is collected.</p>
+
+    <h3>Roadmap and validation</h3>
+    <ol class="road">
+      <li><b>Prototype</b>Arduino/ESP32, camera, gas and pH sensors, blades, suction pump</li>
+      <li><b>Controlled tests</b>Small tanks: mixing, suction, sensor accuracy, shutdown time</li>
+      <li><b>Field pilot</b>Local municipality or sanitation department</li>
+      <li><b>Design freeze</b>Improve from field feedback, safety certification</li>
+      <li><b>Scale</b>Low-cost units for urban and rural use, smart-city integration</li>
+    </ol>
+    <div class="interlock"><b>Current status: early prototype (TRL 3–4).</b> Camera, blades, suction, AI vision, autonomous navigation and cloud analytics are roadmap targets, not yet built. Future scope: AI blockage detection, obstacle-avoiding navigation, predictive maintenance, GIS mapping.</div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="images/logo.jpg" alt="SSS Solutions">
+    <p class="vision">Our vision: no worker should ever have to enter a sewer.</p>
+    
+    <p class="refs">© 2026 SSS Solutions · Smart Sewer Bot</p>
+  </div>
+</footer>
+
+<div class="lightbox" id="lb"><img alt=""></div>
+<script src="script.js"></script>
+</body>
+</html>
